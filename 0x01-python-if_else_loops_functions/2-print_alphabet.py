@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for x in range(ord('a'), ord('z') + 1):
-    print("{}".format(chr(x)), end='')
+for x in range('a', 'z'):
+    print("{}".format(x, end=''))
