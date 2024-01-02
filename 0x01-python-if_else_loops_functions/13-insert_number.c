@@ -1,7 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 /**
  * insert_node - inqsert a number into a sorted list
  * @head: a linked list
