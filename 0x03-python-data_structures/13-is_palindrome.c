@@ -4,7 +4,7 @@
  * @head: head list
  * Return: 0 if not pali, 1 if is pali
 */
-int is_palindrom(listint_t **head)
+int is_palindrome(listint_t **head)
 {
     if (head == NULL || *head == NULL)
         return (1);
