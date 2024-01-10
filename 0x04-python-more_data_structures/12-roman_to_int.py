@@ -9,18 +9,3 @@ def roman_to_int(roman_string):
         num = dictio[n]
         total += num if total < num * 5 else -num
     return total
-
-roman_number = "IVI"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "MCM"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "MCMXLIV"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "LXXXVII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
-
-roman_number = "DCCVII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
