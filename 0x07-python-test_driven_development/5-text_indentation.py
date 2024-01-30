@@ -10,3 +10,7 @@ def text_indentation(text):
             continue
         else:
             print(text[n], end="")
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/5-text_indentation.txt")

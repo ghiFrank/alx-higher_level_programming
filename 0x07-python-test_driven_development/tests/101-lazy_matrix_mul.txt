@@ -1,0 +1,16 @@
+The ``lazy matrix mul`` module
+======================
+
+Using ``lazy_matrix_mul``
+-------------------
+>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+>>> lazy_matrix_mul([1, 2, 3], [[9]])
+Traceback (most recent call last):
+...
+TypeError: m_a must be a list of lists
+
+>>> lazy_matrix_mul([["test"]], [[1, 2, 3]])
+Traceback (most recent call last):
+...
+TypeError: m_a should contain only integers or floats

@@ -1,0 +1,16 @@
+The ``matrix mul`` module
+======================
+
+Using ``matrix_mul``
+-------------------
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+>>> matrix_mul([1, 2, 3], [[9]])
+Traceback (most recent call last):
+...
+TypeError: m_a must be a list of lists
+
+>>> matrix_mul([["test"]], [[1, 2, 3]])
+Traceback (most recent call last):
+...
+TypeError: m_a should contain only integers or floats

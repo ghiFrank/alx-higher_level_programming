@@ -30,3 +30,7 @@ def matrix_divided(matrix, div):
             matrixo[n].append(round((matrix[n][i] / div), 2))
 
     return matrixo
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/2-matrix_divided.txt")

@@ -9,3 +9,7 @@ def print_square(size):
         for i in range(0, size):
             print('#', end='')
         print()
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/4-print_square.txt")

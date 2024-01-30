@@ -27,3 +27,16 @@ def matrix_mul(m_a, m_b):
             lengtho_b = len(m_b[0])
             if len(m_b[n]) != lengtho_b:
                 raise TypeError("each row of m_b must be of the same size")
+
+    matrixo = [[] for i in range(len(m_a))]
+    for i in range(len(m_a)):
+        for j in range(len(m_b[0])):
+            c = 0
+            for k in range(len(m_b)):
+                c += m_a[i][k] * m_b[k][j]
+                matrixo[i].append(c)
+    return matrixo
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/100-matrix_mul.txt")
