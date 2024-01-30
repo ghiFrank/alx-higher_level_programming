@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 
 def copy_list(l):
-    newL = l
-    return newL
+    newL = []
+    return sum([newL + [x] for x in l], [])
