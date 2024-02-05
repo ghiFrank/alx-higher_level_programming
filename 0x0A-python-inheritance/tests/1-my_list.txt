@@ -39,7 +39,7 @@ List already in order:
 	[14, 21, 100]
 
 Test append:
-	>>> ml = Mylist()
+	>>> ml = MyList()
 	>>> ml.append(10)
 	>>> ml
 	[10]
