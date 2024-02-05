@@ -32,3 +32,14 @@ Normal list test:
 	[14, 21, 100]
 	>>> listo
 	[21, 100, 14]
+
+List already in order:
+	>>> listo = MyList([14, 21, 100])
+	>>> listo.print_sorted()
+	[14, 21, 100]
+
+Test append:
+	>>> ml = Mylist()
+	>>> ml.append(10)
+	>>> ml
+	[10]
