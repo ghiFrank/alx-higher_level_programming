@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-'''Module For lookup'''
+'''Module For is_kind_of_class'''
 
 
-def is_same_class(obj, a_class):
+def is_kind_of_class(obj, a_class):
     '''Checks if the object is an instance of the specified class.
     Args:
         obj (object): the object.
