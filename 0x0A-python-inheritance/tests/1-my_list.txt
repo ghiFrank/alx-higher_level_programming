@@ -1,0 +1,11 @@
+The ``MyList`` module
+======================
+
+Using ``print_sorted``
+-------------------
+>>> print_sorted = __import__('1-my_list').print_sorted
+
+list test:
+	>>> listo = MyList((2, 10, 1))
+	>>> listo.print_sorted()
+	[1, 2, 10]
