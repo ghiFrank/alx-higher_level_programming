@@ -5,4 +5,5 @@
 class BaseGeometry():
     """defines BaseGeometry"""
     def area(self):
+        """Area of the bast geometry"""
         raise Exception("area() is not implemented")
