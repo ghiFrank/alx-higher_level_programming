@@ -1,9 +1,17 @@
-The ``MyList`` module
-======================
+Import Function from module:
+	>>> MyList = __import__('1-my_list').MyList
 
-Using ``print_sorted``
--------------------
->>> MyList = __import__('1-my_list').MyList
->>> listo = MyList((2, 10, 1))
->>> listo.print_sorted()
-[1, 2, 10]
+Correct Class Type test:
+	>>> ml = MyList()
+	>>> type(ml) == MyList
+	True
+
+Empty list test:
+	>>> listo = MyList(())
+	>>> listo.print_sorted()
+	[]
+
+Normal list test:
+	>>> listo = MyList((2, 10, 1))
+	>>> listo.print_sorted()
+	[1, 2, 10]
