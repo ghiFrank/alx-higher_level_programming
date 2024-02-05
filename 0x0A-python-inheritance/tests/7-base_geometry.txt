@@ -1,0 +1,32 @@
+Import Function from module:
+	>>> BaseGeometry  = __import__('7-base_geometry').BaseGeometry
+
+Correct Class Type test:
+	>>> geo = BaseGeometry()
+	>>> type(geo) == BaseGeometry
+	True
+
+Normal object test:
+	>>> geo = BaseGeometry()
+	>>> geo.integer_validator("my_int", 12)
+
+area print test:
+	>>> geo = BaseGeometry()
+	>>> print(geo.area())
+	Traceback (most recent call last):
+	...
+	Exception: area() is not implemented
+
+value is not int test:
+	>>> geo = BaseGeometry()
+	>>> geo.integer_validator("name", "John")
+	Traceback (most recent call last):
+	...
+	TypeError: name must be an integer
+
+value is 0 test:
+	>>> geo = BaseGeometry()
+	>>> geo.integer_validator("age", 0)
+	Traceback (most recent call last):
+	...
+	ValueError: age must be greater than 0
