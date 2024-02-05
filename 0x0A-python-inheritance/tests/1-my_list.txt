@@ -6,12 +6,29 @@ Correct Class Type test:
 	>>> type(ml) == MyList
 	True
 
+Correct Instance test:
+	>>> ml = MyList()
+	>>> isinstance(ml, list)
+	True
+
 Empty list test:
 	>>> listo = MyList(())
 	>>> listo.print_sorted()
 	[]
 
 Normal list test:
-	>>> listo = MyList((2, 10, 1))
+	>>> listo = MyList([21, 100, 14])
 	>>> listo.print_sorted()
-	[1, 2, 10]
+	[14, 21, 100]
+
+Negative ints list test:
+	>>> listo = MyList([-2, -10, -1])
+	>>> listo.print_sorted()
+	[-10, -2, -1]
+
+Normal list test:
+	>>> listo = MyList([21, 100, 14])
+	>>> listo.print_sorted()
+	[14, 21, 100]
+	>>> listo
+	[21, 100, 14]
