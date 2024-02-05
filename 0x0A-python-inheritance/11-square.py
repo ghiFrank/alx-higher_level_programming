@@ -2,6 +2,7 @@
 """BaseGeometry module"""
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """A subclass representing a Square."""
     def __init__(self, size):
@@ -12,7 +13,7 @@ class Square(Rectangle):
     
     def area(self):
         '''Method which returns area of Square.'''
-        return self.__sizeof__ ** 2
+        return self.__size ** 2
 
     def __str__(self):
         '''Returns string representation of this square.'''
