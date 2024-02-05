@@ -1,74 +1,31 @@
-# Test cases for the BaseGeometry class
+============================================
+How to use 7-base_geometry.py
+============================================
 
-# Import Function from module
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+This library is very simple, since it only has one function called
+ ''integer_validator()''.
 
-# Correct Class Type test
->>> geo = BaseGeometry()
->>> type(geo) == BaseGeometry
-True
+Numbers:
+========
+''integer_validator()'' returns True if a num is integer.
+:: with positives integers
+   >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+   >>> bg = BaseGeometry()
 
-# Normal object test
->>> geo = BaseGeometry()
->>> geo.integer_validator("my_int", 12)
+:: with positive integer
+   >>> bg.integer_validator("my_int", 12)
 
-# area print test
->>> geo = BaseGeometry()
->>> print(geo.area())
-Traceback (most recent call last):
-...
-Exception: area() is not implemented
+:: with negative integer
+   >>> bg.integer_validator("number", -12)
+   Traceback (most recent call last):
+   ValueError: number must be greater than 0
 
-# value is not int test
->>> geo = BaseGeometry()
->>> geo.integer_validator("name", "John")
-Traceback (most recent call last):
-...
-TypeError: name must be an integer
+:: with 3 arguments
+   >>> bg.integer_validator("numbers", 0, 1)
+   Traceback (most recent call last):
+   TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
-# value is 0 test
->>> geo = BaseGeometry()
->>> geo.integer_validator("age", 0)
-Traceback (most recent call last):
-...
-ValueError: age must be greater than 0
-
-# Large value test
->>> geo = BaseGeometry()
->>> geo.integer_validator("large_number", 1000000)
-
-# Negative value test
->>> geo = BaseGeometry()
->>> geo.integer_validator("negative_number", -5)
-Traceback (most recent call last):
-...
-ValueError: negative_number must be greater than 0
-
-# Test with float value
->>> geo = BaseGeometry()
->>> geo.integer_validator("float_number", 3.5)
-Traceback (most recent call last):
-...
-TypeError: float_number must be an integer
-
-# Test with a string representing an integer
->>> geo = BaseGeometry()
->>> geo.integer_validator("string_int", "123")
-Traceback (most recent call last):
-...
-TypeError: string_int must be an integer
-
-# Test with a string representing a non-integer
->>> geo = BaseGeometry()
->>> geo.integer_validator("string_non_int", "hello")
-Traceback (most recent call last):
-...
-TypeError: string_non_int must be an integer
-
-# Test with a non-string name
->>> geo = BaseGeometry()
->>> geo.integer_validator(123, 5)
-
-# Test with empty name
->>> geo = BaseGeometry()
->>> geo.integer_validator("", 5)
+:: with infinite integer
+   >>> bg.integer_validator("infnumber", int('inf'))
+   Traceback (most recent call last):
+   ValueError: invalid literal for int() with base 10: 'inf'
