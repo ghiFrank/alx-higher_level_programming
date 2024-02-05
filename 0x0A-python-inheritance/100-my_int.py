@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Contains the class MyInt."""
+"""
+Contains the class MyInt.
+"""
 
 
 def MyInt(int):
