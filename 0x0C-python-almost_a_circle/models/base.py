@@ -3,9 +3,10 @@
 import json
 
 class Base:
+    """base"""
     __nb_objects = 0
-    """constructor"""
     def __init__(self, id=None):
+        """Constructor"""
         if id != None:
             self.id = id
         else:
