@@ -3,7 +3,7 @@
 const request = require('request');
 const gameName = process.argv[2];
 const id = process.argv[3];
-const url = `/riot/account/v1/accounts/by-riot-id/${gameName}/${id}`;
+const url = `https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${id}/${gameName}`;
 
 request.get(url, (error, response, body) => {
   if (error) {
